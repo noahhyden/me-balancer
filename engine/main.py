@@ -1,4 +1,7 @@
-import numpy as np 
+import matplotlib
+import numpy
+import pandas
+
 
 ## Identifiera strömmarna
 
