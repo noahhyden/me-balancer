@@ -1,6 +1,4 @@
-import matplotlib
-import numpy
-import pandas
+import numpy as np
 
 
 ## Identifiera strömmarna
@@ -17,14 +15,15 @@ import pandas
 
 # Unknowns
 
-A = [0,0,0,0,
-     0,0,0,0,
-     0,0,0,0,
-     0,0,0,-1,
-     0,0,0,1]
+A = np.array([[1, 0, 0, 0, 0], 
+              [0, 1, 0, 0, 0], 
+              [1, 1, 1, -1, 0], 
+              [0, 0, -1, 0.3, 0], 
+              [0, 0, 0, 0.7, -1]])
 
+b = np.array([5,2,0,0,0])
 
-# Species are atomslag
+print("Answer is", np.linalg.solve(A, b.T))
 
 def textInput():
     answer = 0 
